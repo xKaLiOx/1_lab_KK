@@ -32,12 +32,17 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdbool.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+/* Type to describe register values */
+typedef struct sRegister_t {
+	uint8_t address;
+	uint8_t value;
+}sRegister_t;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -60,6 +65,9 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define GPS_WakeUp_Pin GPIO_PIN_5
 #define GPS_WakeUp_GPIO_Port GPIOA
+#define PPS_INT_Pin GPIO_PIN_10
+#define PPS_INT_GPIO_Port GPIOB
+#define PPS_INT_EXTI_IRQn EXTI15_10_IRQn
 #define GPS_Reset_Pin GPIO_PIN_8
 #define GPS_Reset_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */

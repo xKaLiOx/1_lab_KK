@@ -1,0 +1,19 @@
+!SESSION 2021-09-08 17:41:53.314 -----------------------------------------------
+eclipse.buildId=Version 1.5.0
+java.version=1.8.0_272
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  D:\Pranas\2021\T170b008\Tusc_pr\f401_GPS_Shield\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\Pranas\2021\T170b008\Tusc_pr\f401_GPS_Shield\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-09-08 17:42:16.221
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-09-08 17:42:16.277
+!MESSAGE Log4j initialized with config file D:\Pranas\2021\T170b008\Tusc_pr\f401_GPS_Shield\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-09-08 17:42:17.588
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2021-09-08 17:42:31.547
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
