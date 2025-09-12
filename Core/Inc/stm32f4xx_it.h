@@ -23,7 +23,7 @@
 #define __STM32F4xx_IT_H
 
 #ifdef __cplusplus
- extern "C" {
+extern "C" {
 #endif
 
 /* Private includes ----------------------------------------------------------*/
@@ -56,6 +56,7 @@ void SVC_Handler(void);
 void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
+void TIM1_BRK_TIM9_IRQHandler(void);
 void EXTI15_10_IRQHandler(void);
 void DMA2_Stream2_IRQHandler(void);
 /* USER CODE BEGIN EFP */
@@ -67,5 +68,3 @@ void DMA2_Stream2_IRQHandler(void);
 #endif
 
 #endif /* __STM32F4xx_IT_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

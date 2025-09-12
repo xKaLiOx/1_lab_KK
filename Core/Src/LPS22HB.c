@@ -53,11 +53,12 @@ HAL_StatusTypeDef LPS22HB_Convert_Data(I2C_HandleTypeDef *hi2c, LPS22HB_STRUCT_D
 	Status = HAL_I2C_Mem_Read(hi2c, LPS22HB_SLAVE_ADDRESS, LPS22HB_PRESS_OUT_XL_ADDR, 1, pres_data, sizeof(pres_data), LPS22HB_TIMEOUT);
 	if(Status == HAL_OK)
 	{
-		Status = HAL_I2C_Mem_Read(hi2c, LPS22HB_SLAVE_ADDRESS, LPS22HB_TEMP_OUT_L_ADDR, 1, temp_data, sizeof(temp_data), LPS22HB_TIMEOUT);
+	Status = HAL_I2C_Mem_Read(hi2c, LPS22HB_SLAVE_ADDRESS, LPS22HB_TEMP_OUT_L_ADDR, 1, temp_data, sizeof(temp_data), LPS22HB_TIMEOUT);
 	}
+	else return HAL_ERROR;
 
 	sensor_values->Pressure = (pres_data[0] | (pres_data[1] << 8) | pres_data[2] << 16)>>12;//padalinti per 4096, 12 bitu postumis //in hPa
 	sensor_values->Temperature = (temp_data[0] | (temp_data[1] << 8))/100.0;
 
-	return Status;
+	return HAL_OK;
 }

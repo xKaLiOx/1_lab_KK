@@ -57,6 +57,8 @@
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
 
+TIM_HandleTypeDef htim9;
+
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart6;
 DMA_HandleTypeDef hdma_usart1_rx;
@@ -72,6 +74,7 @@ static void MX_DMA_Init(void);
 static void MX_USART6_UART_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_I2C1_Init(void);
+static void MX_TIM9_Init(void);
 /* USER CODE BEGIN PFP */
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
@@ -87,6 +90,8 @@ static uint8_t message_buffer[MESSAGE_BUFFER_MAX_LENGTH] = {0};
 static int message_buffer_length = 0;
 static float humidity, temperature = 0;
 
+volatile uint8_t SAMPLE_UPDATE = 0;//for sampling interval
+
 LPS22HB_STRUCT_DATA LPS22HB_data;
 /* USER CODE END 0 */
 
@@ -96,33 +101,35 @@ LPS22HB_STRUCT_DATA LPS22HB_data;
   */
 int main(void)
 {
-	/* USER CODE BEGIN 1 */
 
-	/* USER CODE END 1 */
+  /* USER CODE BEGIN 1 */
 
-	/* MCU Configuration--------------------------------------------------------*/
+  /* USER CODE END 1 */
 
-	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-	HAL_Init();
+  /* MCU Configuration--------------------------------------------------------*/
 
-	/* USER CODE BEGIN Init */
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
 
-	/* USER CODE END Init */
+  /* USER CODE BEGIN Init */
 
-	/* Configure the system clock */
-	SystemClock_Config();
+  /* USER CODE END Init */
 
-	/* USER CODE BEGIN SysInit */
+  /* Configure the system clock */
+  SystemClock_Config();
 
-	/* USER CODE END SysInit */
+  /* USER CODE BEGIN SysInit */
 
-	/* Initialize all configured peripherals */
-	MX_GPIO_Init();
-	MX_DMA_Init();
-	MX_USART6_UART_Init();
-	MX_USART1_UART_Init();
-	MX_I2C1_Init();
-	/* USER CODE BEGIN 2 */
+  /* USER CODE END SysInit */
+
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_DMA_Init();
+  MX_USART6_UART_Init();
+  MX_USART1_UART_Init();
+  MX_I2C1_Init();
+  MX_TIM9_Init();
+  /* USER CODE BEGIN 2 */
 	HAL_StatusTypeDef STATUS = HAL_OK;
 #ifdef SCAN_I2C
 	I2C_scanning(&huart6, &hi2c1);
@@ -134,36 +141,52 @@ int main(void)
 
 	LPS22HB_Init(&hi2c1, &huart6);
 	LPS22HB_Start_Sample(&hi2c1);
-	HAL_Delay(1);//for now blocking, gpio pin is bent
+	HAL_Delay(1);//blocking, gpio pin is bent
 	STATUS = LPS22HB_Convert_Data(&hi2c1, &LPS22HB_data);
 	if(STATUS == HAL_OK)
 	{
-		message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"LPS22HB acquired values:\r\nPressure = %1.1f\r\nTemperature = %1.1f\r\n",LPS22HB_data.Pressure,LPS22HB_data.Temperature);
+		message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"LPS22HB acquired values:\r\nPressure = %1.1f Pa, Temperature = %1.1f C\r\n",LPS22HB_data.Pressure,LPS22HB_data.Temperature);
 		HAL_UART_Transmit(&huart6, message_buffer, message_buffer_length, UART_TIMEOUT);
 	}
 
 
 	/* Get hts221 temperature and humidity data for IKS01A2 and IKS01A3 */
 	if(hts221_driver_get_temperature(&temperature, &humidity) == true){
-		message_buffer_length = snprintf((char *)message_buffer, MESSAGE_BUFFER_MAX_LENGTH, "Temperature - %.2f C, Humidity - %.2f\r\n", temperature, humidity);
+		message_buffer_length = snprintf((char *)message_buffer, MESSAGE_BUFFER_MAX_LENGTH, "HTS221 acquired values:\r\nTemperature - %.2f C, Humidity - %.2f\r\n", temperature, humidity);
 		HAL_UART_Transmit(&huart6, message_buffer, message_buffer_length, UART_TIMEOUT);
 	}
-	/* USER CODE END 2 */
 
-	/* Infinite loop */
-	/* USER CODE BEGIN WHILE */
-	while (1) {
-	/* USER CODE END WHILE */
-	/* USER CODE BEGIN 3 */
-		/* Insert periodic data readout here */
-		/*GPS data reading and output on each PPS interrupt */
-		if(PPS_Flag == true){
-			/* GPS message found in array: gps_message_buffer */
-			/* Parse NMEA message here */
-			HAL_UART_Transmit(&huart6,gps_message_buffer,GPS_MESSAGE_BUFFER_MAX_LENGTH,UART_TIMEOUT);
-			/* Do periodic sensor reading here */
-			PPS_Flag = false;
+	HAL_TIM_OC_Start_IT(&htim9, TIM_CHANNEL_1);//starting first and second OC channels
+	HAL_TIM_OC_Start_IT(&htim9, TIM_CHANNEL_2);//starting first and second OC channels
+
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+	while (1)
+	{
+		/* USER CODE END WHILE */
+
+		/* USER CODE BEGIN 3 */
+		LPS22HB_Start_Sample(&hi2c1);
+		HAL_Delay(1);//blocking, gpio pin is bent
+		STATUS = LPS22HB_Convert_Data(&hi2c1, &LPS22HB_data);
+		if(STATUS == HAL_OK)
+		{
+			message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"LPS22HB acquired values:\r\n"
+					"Pressure = %1.1f Pa, Temperature = %1.1f C\r\n",LPS22HB_data.Pressure,LPS22HB_data.Temperature);
+			HAL_UART_Transmit(&huart6, message_buffer, message_buffer_length, UART_TIMEOUT);
+			HAL_Delay(200);
 		}
+
+		//		if(SAMPLE_UPDATE == 1)
+		//		{
+		//			while(hi2c1.State != HAL_I2C_STATE_READY);//POLLING UNTIL I2C FINISHES
+		//
+		//			HAL_UART_Transmit(&huart6,gps_message_buffer,GPS_MESSAGE_BUFFER_MAX_LENGTH,UART_TIMEOUT);
+		//			SAMPLE_UPDATE = 0;
+		//		}
 	}
   /* USER CODE END 3 */
 }
@@ -181,6 +204,7 @@ void SystemClock_Config(void)
   */
   __HAL_RCC_PWR_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
+
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
@@ -197,6 +221,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
@@ -243,6 +268,62 @@ static void MX_I2C1_Init(void)
   /* USER CODE BEGIN I2C1_Init 2 */
 
   /* USER CODE END I2C1_Init 2 */
+
+}
+
+/**
+  * @brief TIM9 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM9_Init(void)
+{
+
+  /* USER CODE BEGIN TIM9_Init 0 */
+
+  /* USER CODE END TIM9_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM9_Init 1 */
+
+  /* USER CODE END TIM9_Init 1 */
+  htim9.Instance = TIM9;
+  htim9.Init.Prescaler = 8400-1;
+  htim9.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim9.Init.Period = 10000-1;
+  htim9.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim9.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim9) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim9, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_OC_Init(&htim9) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_TIMING;
+  sConfigOC.Pulse = 3333-1;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_OC_ConfigChannel(&htim9, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.Pulse = 6666-1;
+  if (HAL_TIM_OC_ConfigChannel(&htim9, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM9_Init 2 */
+
+  /* USER CODE END TIM9_Init 2 */
 
 }
 
@@ -336,13 +417,20 @@ static void MX_DMA_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, GPS_WakeUp_Pin|GPS_Reset_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(INTERVAL_SIGNAL_GPIO_Port, INTERVAL_SIGNAL_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : GPS_WakeUp_Pin GPS_Reset_Pin */
   GPIO_InitStruct.Pin = GPS_WakeUp_Pin|GPS_Reset_Pin;
@@ -357,10 +445,20 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(PPS_INT_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : INTERVAL_SIGNAL_Pin */
+  GPIO_InitStruct.Pin = INTERVAL_SIGNAL_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(INTERVAL_SIGNAL_GPIO_Port, &GPIO_InitStruct);
+
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -393,10 +491,27 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 	/* PPS interrupt handler */
 	if(GPIO_Pin == PPS_INT_Pin){
 		/* PPS interrupt found, receive DMA data */
+		__disable_irq();
 		PPS_Flag = true;
 		HAL_UART_Receive_DMA(&huart1, gps_message_buffer, GPS_MESSAGE_BUFFER_MAX_LENGTH);
+		SAMPLE_UPDATE = 1;
+		TIM9->CNT = 0;
+		__enable_irq();
+		HAL_GPIO_TogglePin(INTERVAL_SIGNAL_GPIO_Port, INTERVAL_SIGNAL_Pin);// commutation to indicate
 	}
 }
+
+void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if(htim->Instance == TIM9)//sample data (333.3ms interval)
+	{
+		__disable_irq();
+		SAMPLE_UPDATE = 1;
+		__enable_irq();
+		HAL_GPIO_TogglePin(INTERVAL_SIGNAL_GPIO_Port, INTERVAL_SIGNAL_Pin);// commutation to indicate
+	}
+}
+
 /* USER CODE END 4 */
 
 /**
@@ -412,8 +527,7 @@ void Error_Handler(void)
 	}
   /* USER CODE END Error_Handler_Debug */
 }
-
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.
@@ -429,5 +543,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
