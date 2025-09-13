@@ -24,7 +24,9 @@
 #define LPS22HB_CTRL_REG2 0x11 //7th bit reboot, 4th auto increment addr, 0th one-shot for conversion
 #define LPS22HB_CTRL_REG3 0x12
 #define LPS22HB_INT_SOURCE 0x25
-#define LPS22HB_STATUS 0x27
+#define LPS22HB_STATUS_REG 0x27
+#define LPS22HB_FIFO_CTRL 0x14
+#define LPS22HB_RES_CONF 0x1A
 
 #define LPS22HB_TIMEOUT 10//10ms timeout delay
 

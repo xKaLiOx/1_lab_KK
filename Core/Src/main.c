@@ -32,6 +32,7 @@
 #include "sht40ad1b_driver.h"
 #include "gnss_driver.h"
 #include "LPS22HB.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,7 +47,7 @@
 #define MESSAGE_BUFFER_MAX_LENGTH 200
 
 
-#define SCAN_I2C
+//#define SCAN_I2C
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -136,19 +137,32 @@ int main(void)
 #endif
 
 	/* For IKS01A2*/
+	HAL_Delay(200);//wait 200ms for RC filters to charge up
 	hts221_driver_init();
 	gnss_driver_init();
-
 	LPS22HB_Init(&hi2c1, &huart6);
-	LPS22HB_Start_Sample(&hi2c1);
-	HAL_Delay(1);//blocking, gpio pin is bent
-	STATUS = LPS22HB_Convert_Data(&hi2c1, &LPS22HB_data);
-	if(STATUS == HAL_OK)
-	{
-		message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"LPS22HB acquired values:\r\nPressure = %1.1f Pa, Temperature = %1.1f C\r\n",LPS22HB_data.Pressure,LPS22HB_data.Temperature);
-		HAL_UART_Transmit(&huart6, message_buffer, message_buffer_length, UART_TIMEOUT);
-	}
 
+	while(1)
+	{
+	LPS22HB_Start_Sample(&hi2c1);
+	uint8_t reg1, reg2, status;
+	HAL_I2C_Mem_Read(&hi2c1, LPS22HB_SLAVE_ADDRESS, LPS22HB_CTRL_REG1,
+			I2C_MEMADD_SIZE_8BIT, &reg1, 1, LPS22HB_TIMEOUT);
+	HAL_I2C_Mem_Read(&hi2c1, LPS22HB_SLAVE_ADDRESS, LPS22HB_CTRL_REG2,
+			I2C_MEMADD_SIZE_8BIT, &reg2, 1, LPS22HB_TIMEOUT);
+	HAL_I2C_Mem_Read(&hi2c1, LPS22HB_SLAVE_ADDRESS, LPS22HB_STATUS_REG,
+			I2C_MEMADD_SIZE_8BIT, &status, 1, LPS22HB_TIMEOUT);
+
+	char message_buffer[70];
+	sprintf(message_buffer,"CTRL1=0x%02X, CTRL2=0x%02X, STATUS=0x%02X\r\n", reg1, reg2, status);
+	uint16_t message_buffer_length = strlen(message_buffer);
+	HAL_UART_Transmit(&huart6, message_buffer, message_buffer_length, 10);
+
+	LPS22HB_Convert_Data(&hi2c1, &LPS22HB_data);
+		message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"LPS22HB acquired values:\r\nPressure = %1.1f hPa, Temperature = %1.1f C\r\n",LPS22HB_data.Pressure,LPS22HB_data.Temperature);
+		HAL_UART_Transmit(&huart6, message_buffer, message_buffer_length, UART_TIMEOUT);
+	HAL_Delay(2000);
+	}
 
 	/* Get hts221 temperature and humidity data for IKS01A2 and IKS01A3 */
 	if(hts221_driver_get_temperature(&temperature, &humidity) == true){
@@ -169,13 +183,14 @@ int main(void)
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
+		while(hi2c1.State != HAL_I2C_STATE_READY);
 		LPS22HB_Start_Sample(&hi2c1);
-		HAL_Delay(1);//blocking, gpio pin is bent
+		while(hi2c1.State != HAL_I2C_STATE_READY);
 		STATUS = LPS22HB_Convert_Data(&hi2c1, &LPS22HB_data);
 		if(STATUS == HAL_OK)
 		{
 			message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"LPS22HB acquired values:\r\n"
-					"Pressure = %1.1f Pa, Temperature = %1.1f C\r\n",LPS22HB_data.Pressure,LPS22HB_data.Temperature);
+					"Pressure = %1.1f hPa, Temperature = %1.1f C\r\n",LPS22HB_data.Pressure,LPS22HB_data.Temperature);
 			HAL_UART_Transmit(&huart6, message_buffer, message_buffer_length, UART_TIMEOUT);
 			HAL_Delay(200);
 		}
