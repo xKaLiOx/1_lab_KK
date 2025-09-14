@@ -10,6 +10,7 @@
 #define INC_LPS22HB_H_
 
 #include "main.h"
+#include <stdio.h>
 
 #define LPS22HB_SLAVE_ADDRESS 0xBB // SHIFTED TO LEFT BY 1
 

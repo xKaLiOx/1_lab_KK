@@ -21,15 +21,6 @@ HAL_StatusTypeDef LPS22HB_Init(I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huar
 	}
 	char MSG[] = "\r\nLPS22HB recognized \r\n";
 	Status = HAL_UART_Transmit(huart, (uint8_t*)MSG, strlen(MSG), LPS22HB_TIMEOUT);
-//	data = 0x80;//reboot
-
-//	Status = HAL_I2C_Mem_Write(hi2c, LPS22HB_SLAVE_ADDRESS, LPS22HB_CTRL_REG2, I2C_MEMADD_SIZE_8BIT, &data, 1, LPS22HB_TIMEOUT);
-//	uint32_t tickstart = HAL_GetTick();
-//	do {
-//		HAL_I2C_Mem_Read(hi2c, LPS22HB_SLAVE_ADDRESS, LPS22HB_CTRL_REG2, I2C_MEMADD_SIZE_8BIT, &int_source, 1, LPS22HB_TIMEOUT);
-//		if ((HAL_GetTick() - tickstart) > 150) return HAL_TIMEOUT;
-//	} while (int_source & 0x80); // wait until BOOT = 0
-
 	data = 0x04;
 	HAL_I2C_Mem_Write(hi2c, LPS22HB_SLAVE_ADDRESS, LPS22HB_CTRL_REG2, I2C_MEMADD_SIZE_8BIT, &data, 1, LPS22HB_TIMEOUT);
 	uint32_t tickstart = HAL_GetTick();
@@ -67,7 +58,8 @@ HAL_StatusTypeDef LPS22HB_Init(I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huar
 		{
 			sprintf(MSG,"TIMED OUT IN INIT\r\n");
 			Status = HAL_UART_Transmit(huart, (uint8_t*)MSG, strlen(MSG), LPS22HB_TIMEOUT);
-			return HAL_TIMEOUT;
+			HAL_I2C_DeInit(hi2c);
+			HAL_I2C_Init(hi2c);//reinit i2c, might be hanging
 		}
 	} while ((data & 0x03) <= 0x00); // wait for P_DA & T_DA
 
@@ -96,7 +88,7 @@ HAL_StatusTypeDef LPS22HB_Start_Sample(I2C_HandleTypeDef *hi2c, UART_HandleTypeD
 		}
 	} while (data & 0x01); // Wait until ONE_SHOT bit is cleared and if locked on reboot
 	data = 0x01;//one shot mode
-	LPS22HB_Log_Data(hi2c, huart);
+	//LPS22HB_Log_Data(hi2c, huart); for logging registers
 	HAL_I2C_Mem_Write(hi2c, LPS22HB_SLAVE_ADDRESS, LPS22HB_CTRL_REG2, I2C_MEMADD_SIZE_8BIT, &data, 1, LPS22HB_TIMEOUT);
 	return HAL_OK;
 }

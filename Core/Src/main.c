@@ -132,16 +132,15 @@ int main(void)
 	MX_I2C1_Init();
 	MX_TIM9_Init();
 	/* USER CODE BEGIN 2 */
-	HAL_StatusTypeDef STATUS = HAL_OK;
 #ifdef SCAN_I2C
 	I2C_scanning(&huart6, &hi2c1);
 #endif
 
 	/* For IKS01A2*/
-	HAL_Delay(400);//wait 200ms for RC filters to charge up
+	HAL_Delay(400);//wait 400ms for RC filters to charge up
 	message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"START\r\n------------------\r\n");
 	HAL_UART_Transmit(&huart6, (uint8_t*)message_buffer, message_buffer_length, UART_TIMEOUT);
-	hts221_driver_init();
+	//hts221_driver_init();
 	gnss_driver_init();
 
 	LPS22HB_Init(&hi2c1, &huart6);
@@ -169,20 +168,9 @@ int main(void)
 			LPS22HB_Start_Sample(&hi2c1,&huart6);
 
 			LPS22HB_Convert_Data(&hi2c1, &LPS22HB_data);
-			message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"LPS22HB acquired values:\r\nPressure = %1.1f hPa, Temperature = %1.1f C\r\n",LPS22HB_data.Pressure,LPS22HB_data.Temperature);
+			message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"LPS22HB acquired values at %lu:\r\nPressure = %1.1f hPa, Temperature = %1.1f C\r\n",uwTick,LPS22HB_data.Pressure,LPS22HB_data.Temperature);
 			HAL_UART_Transmit(&huart6, (uint8_t*)message_buffer, message_buffer_length, UART_TIMEOUT);
 			SAMPLE_UPDATE = 0;
-		}
-		while(hi2c1.State != HAL_I2C_STATE_READY);
-		LPS22HB_Start_Sample(&hi2c1,&huart6);
-		while(hi2c1.State != HAL_I2C_STATE_READY);
-		STATUS = LPS22HB_Convert_Data(&hi2c1, &LPS22HB_data);
-		if(STATUS == HAL_OK)
-		{
-			message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"LPS22HB acquired values:\r\n"
-					"Pressure = %1.1f hPa, Temperature = %1.1f C\r\n",LPS22HB_data.Pressure,LPS22HB_data.Temperature);
-			HAL_UART_Transmit(&huart6, message_buffer, message_buffer_length, UART_TIMEOUT);
-			HAL_Delay(200);
 		}
 
 		//		if(SAMPLE_UPDATE == 1)
@@ -500,7 +488,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 		PPS_Flag = true;
 		HAL_UART_Receive_DMA(&huart1, gps_message_buffer, GPS_MESSAGE_BUFFER_MAX_LENGTH);
 		SAMPLE_UPDATE = 1;
-		TIM9->CNT = 0;
+		TIM9->CNT = 0;//synchronising by resetting the timer every 1s, the timer itself has 1s of time
+		sprintf((char *)message_buffer,"SysTick:%lu\r\n",uwTick);
+		HAL_UART_Transmit(&huart6, message_buffer, strlen((char*)message_buffer), UART_TIMEOUT);
 		__enable_irq();
 		HAL_GPIO_TogglePin(INTERVAL_SIGNAL_GPIO_Port, INTERVAL_SIGNAL_Pin);// commutation to indicate
 	}
