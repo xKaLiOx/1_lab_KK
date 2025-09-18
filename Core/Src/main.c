@@ -42,12 +42,13 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define GPS_MESSAGE_BUFFER_MAX_LENGTH 200
+#define GPS_MESSAGE_BUFFER_MAX_LENGTH 300
 #define UART_TIMEOUT 10
-#define MESSAGE_BUFFER_MAX_LENGTH 200
+#define MESSAGE_BUFFER_MAX_LENGTH 100
 
 
 //#define SCAN_I2C
+//#define LOG_DATA
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -80,6 +81,9 @@ static void MX_TIM9_Init(void);
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
 void I2C_scanning(UART_HandleTypeDef *huart, I2C_HandleTypeDef *hi2c);
+uint8_t NMEA_data_parsing(UART_HandleTypeDef *huart, char* MSG);
+uint8_t CHECKSUM_calculation(char* msg_index, uint16_t msg_length);
+void DM_TO_DMS_conversion(char* coordinate_start,uint8_t length);
 
 /* USER CODE END PFP */
 
@@ -89,12 +93,13 @@ static bool PPS_Flag = false;
 static uint8_t gps_message_buffer[GPS_MESSAGE_BUFFER_MAX_LENGTH] = {0};
 static uint8_t message_buffer[MESSAGE_BUFFER_MAX_LENGTH] = {0};
 static int message_buffer_length = 0;
-static float humidity, temperature = 0;
+//static float humidity, temperature = 0; hts221 not used
 uint8_t soft_reset = 0;
 
 volatile uint8_t SAMPLE_UPDATE = 0;//for sampling interval
 
 LPS22HB_STRUCT_DATA LPS22HB_data;
+GPSDef gps_data = {.HDOP = 0,.hours=0,.minutes=0,.seconds=0,.fix=0,.Satellites=0};
 /* USER CODE END 0 */
 
 /**
@@ -105,7 +110,9 @@ int main(void)
 {
 
 	/* USER CODE BEGIN 1 */
-
+	char temp[10];
+	uint8_t gnss_data_found;
+	uint8_t checksum;
 	/* USER CODE END 1 */
 
 	/* MCU Configuration--------------------------------------------------------*/
@@ -138,19 +145,13 @@ int main(void)
 
 	/* For IKS01A2*/
 	HAL_Delay(400);//wait 400ms for RC filters to charge up
-	message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"START\r\n------------------\r\n");
+#ifdef LOG_DATA
+	message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"$STARTING INIT\r\n\r\n");
 	HAL_UART_Transmit(&huart6, (uint8_t*)message_buffer, message_buffer_length, UART_TIMEOUT);
-	//hts221_driver_init();
+#endif
 	gnss_driver_init();
 
 	LPS22HB_Init(&hi2c1, &huart6);
-
-	/* Get hts221 temperature and humidity data for IKS01A2 and IKS01A3 */
-	if(hts221_driver_get_temperature(&temperature, &humidity) == true){
-		message_buffer_length = snprintf((char *)message_buffer, MESSAGE_BUFFER_MAX_LENGTH, "HTS221 acquired values:\r\nTemperature - %.2f C, Humidity - %.2f\r\n", temperature, humidity);
-		HAL_UART_Transmit(&huart6, message_buffer, message_buffer_length, UART_TIMEOUT);
-	}
-
 	HAL_TIM_OC_Start_IT(&htim9, TIM_CHANNEL_1);//starting first and second OC channels
 	HAL_TIM_OC_Start_IT(&htim9, TIM_CHANNEL_2);//starting first and second OC channels
 
@@ -163,23 +164,38 @@ int main(void)
 	{
 		/* USER CODE END WHILE */
 		/* USER CODE BEGIN 3 */
-		if(SAMPLE_UPDATE)
+		if(SAMPLE_UPDATE && PPS_Flag != 1)//first priority to PPS_FLAG, then this, if both on
 		{
 			LPS22HB_Start_Sample(&hi2c1,&huart6);
-
 			LPS22HB_Convert_Data(&hi2c1, &LPS22HB_data);
-			message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"LPS22HB acquired values at %lu:\r\nPressure = %1.1f hPa, Temperature = %1.1f C\r\n",uwTick,LPS22HB_data.Pressure,LPS22HB_data.Temperature);
-			HAL_UART_Transmit(&huart6, (uint8_t*)message_buffer, message_buffer_length, UART_TIMEOUT);
+
+			message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"$PNLBLPS,%1.1f,%1.1f,*",LPS22HB_data.Pressure,LPS22HB_data.Temperature);
+			checksum = CHECKSUM_calculation((char*)message_buffer,message_buffer_length);
+			sprintf(temp,"%02X\r\n",checksum);
+			strcat((char*)message_buffer,temp);
+			HAL_UART_Transmit(&huart6, (uint8_t*)message_buffer, message_buffer_length+strlen((char*)temp), UART_TIMEOUT);
 			SAMPLE_UPDATE = 0;
 		}
+		if(PPS_Flag == 1)
+		{
+			__disable_irq();//turn off IRQ, reading data from message_buffer
+			gnss_data_found = NMEA_data_parsing(&huart6,(char*)gps_message_buffer);
+			PPS_Flag = 0;
+			__enable_irq();
+			DM_TO_DMS_conversion(gps_data.Longitude,20);
+			DM_TO_DMS_conversion(gps_data.Latitude,20);
+			if (gnss_data_found)
+			{
+				message_buffer_length = snprintf((char *)message_buffer,MESSAGE_BUFFER_MAX_LENGTH,"$PNLBGPS,%u,%s,%s,%s,%s,%02u%02u%02u,%u,%1.1f,*",gps_data.fix,gps_data.Latitude,gps_data.Lat_direction,gps_data.Longitude,gps_data.Long_direction,gps_data.hours,gps_data.minutes,gps_data.seconds,gps_data.Satellites,gps_data.HDOP);
+				checksum = CHECKSUM_calculation((char*)message_buffer,message_buffer_length);
+				sprintf(temp,"%02X\r\n",checksum);
+				strcat((char*)message_buffer,temp);
+				HAL_UART_Transmit(&huart6, (uint8_t*)message_buffer, message_buffer_length+strlen((char*)temp), UART_TIMEOUT);
 
-		//		if(SAMPLE_UPDATE == 1)
-		//		{
-		//			while(hi2c1.State != HAL_I2C_STATE_READY);//POLLING UNTIL I2C FINISHES
-		//
-		//			HAL_UART_Transmit(&huart6,gps_message_buffer,GPS_MESSAGE_BUFFER_MAX_LENGTH,UART_TIMEOUT);
-		//			SAMPLE_UPDATE = 0;
-		//		}
+				gnss_data_found = 0;
+			}
+		}
+
 	}
 	/* USER CODE END 3 */
 }
@@ -456,6 +472,28 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+uint8_t CHECKSUM_calculation(char* msg_index, uint16_t msg_length)
+{
+	char* temp;
+	uint8_t xor_value=0;
+	for(temp = msg_index;temp<(msg_index+msg_length);temp++)
+	{
+		xor_value = (xor_value^(*temp));//xor one char at a time
+	}
+	return xor_value;
+}
+void DM_TO_DMS_conversion(char* coordinate_start,uint8_t length)//overwriting data
+{
+	//to convert before comma are dd,mm values, after it minutes in seconds, so multiply by 60
+	double temp = atof(coordinate_start);
+	int16_t degrees;
+	int16_t minutes;
+	degrees = (int16_t)temp/100;
+	minutes = (int16_t)temp%100;
+	float seconds = ((temp - (int16_t)temp)*60);
+	sprintf(coordinate_start,"%02d.%02d.%1.2f",degrees,minutes,seconds);
+}
+
 void I2C_scanning(UART_HandleTypeDef *huart, I2C_HandleTypeDef *hi2c)
 {
 	uint8_t Buffer[25] = {0};
@@ -479,6 +517,59 @@ void I2C_scanning(UART_HandleTypeDef *huart, I2C_HandleTypeDef *hi2c)
 	}
 	HAL_UART_Transmit(huart, EndMSG, strlen((char*)EndMSG), 10000);
 }
+
+/*
+ * @brief returns data_found byte, otherwise dont print
+ */
+uint8_t NMEA_data_parsing(UART_HandleTypeDef *huart, char* MSG)
+{
+	char delimiter[] = "$\r\n";
+	char commandToLook[] = "GPGGA";
+
+	char *temp = strtok(MSG, delimiter);
+	char *commandPtr;
+
+	while (temp != NULL)
+	{
+		commandPtr = strstr(temp, commandToLook);
+		if (commandPtr != NULL) // found the data to parse
+		{
+			commandPtr = strtok(commandPtr + 1, ","); // GPGGA, skip
+			commandPtr = strtok(NULL, ",");           // time
+			uint32_t time = atoi(commandPtr);
+			gps_data.hours = (time / 10000) + 3; // EET Summer time +3
+			gps_data.minutes = (time / 100) % 100;
+			gps_data.seconds = time % 100;
+
+			commandPtr = strtok(NULL, ","); // Latitude
+			strcpy(gps_data.Latitude, commandPtr);
+			commandPtr = strtok(NULL, ","); // N or S
+			strcpy(gps_data.Lat_direction, commandPtr);
+
+			commandPtr = strtok(NULL, ","); // Longitude
+			strcpy(gps_data.Longitude, commandPtr);
+			commandPtr = strtok(NULL, ","); // E or W
+			strcpy(gps_data.Long_direction, commandPtr);
+
+
+			commandPtr = strtok(NULL, ","); // fix
+			gps_data.fix = atoi(commandPtr);
+			commandPtr = strtok(NULL, ","); // number of satellites
+			gps_data.Satellites = atoi(commandPtr);
+
+			commandPtr = strtok(NULL, ","); // HDOP
+			gps_data.HDOP = atof(commandPtr);
+
+			return 1;//data found
+		}
+		else
+		{
+			temp = strtok(NULL, delimiter);
+		}
+	}
+	return 0;//by this point no useful data found, exit with 0
+}
+
 /* External GPIO interrupt handler */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 	/* PPS interrupt handler */
@@ -486,12 +577,14 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 		/* PPS interrupt found, receive DMA data */
 		__disable_irq();
 		PPS_Flag = true;
-		HAL_UART_Receive_DMA(&huart1, gps_message_buffer, GPS_MESSAGE_BUFFER_MAX_LENGTH);
 		SAMPLE_UPDATE = 1;
+		__enable_irq();
+		HAL_UART_Receive_DMA(&huart1, gps_message_buffer, GPS_MESSAGE_BUFFER_MAX_LENGTH);
 		TIM9->CNT = 0;//synchronising by resetting the timer every 1s, the timer itself has 1s of time
+#ifdef LOG_DATA
 		sprintf((char *)message_buffer,"SysTick:%lu\r\n",uwTick);
 		HAL_UART_Transmit(&huart6, message_buffer, strlen((char*)message_buffer), UART_TIMEOUT);
-		__enable_irq();
+#endif
 		HAL_GPIO_TogglePin(INTERVAL_SIGNAL_GPIO_Port, INTERVAL_SIGNAL_Pin);// commutation to indicate
 	}
 }

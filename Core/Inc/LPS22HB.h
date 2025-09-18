@@ -37,6 +37,7 @@ typedef struct
 	float Temperature;
 } LPS22HB_STRUCT_DATA;
 
+
 HAL_StatusTypeDef LPS22HB_Init(I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huart);//reboot and interrupt config
 HAL_StatusTypeDef LPS22HB_Start_Sample(I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huart);//one-shot start
 HAL_StatusTypeDef LPS22HB_Convert_Data(I2C_HandleTypeDef *hi2c, LPS22HB_STRUCT_DATA* sensor_values);//data conversion in hpa

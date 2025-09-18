@@ -10,7 +10,6 @@
 HAL_StatusTypeDef LPS22HB_Init(I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huart)
 {
 	uint8_t data = 0;
-	uint8_t int_source;
 
 	HAL_StatusTypeDef Status = HAL_OK;
 	Status = HAL_I2C_Mem_Read(hi2c, LPS22HB_SLAVE_ADDRESS, LPS22HB_WHOAMI_ADDR, I2C_MEMADD_SIZE_8BIT, &data, 1, LPS22HB_TIMEOUT);
@@ -19,8 +18,8 @@ HAL_StatusTypeDef LPS22HB_Init(I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huar
 	{
 		return HAL_ERROR;
 	}
-	char MSG[] = "\r\nLPS22HB recognized \r\n";
-	Status = HAL_UART_Transmit(huart, (uint8_t*)MSG, strlen(MSG), LPS22HB_TIMEOUT);
+	//	char MSG[] = "\r\nLPS22HB recognized \r\n";
+	//	Status = HAL_UART_Transmit(huart, (uint8_t*)MSG, strlen(MSG), LPS22HB_TIMEOUT);
 	data = 0x04;
 	HAL_I2C_Mem_Write(hi2c, LPS22HB_SLAVE_ADDRESS, LPS22HB_CTRL_REG2, I2C_MEMADD_SIZE_8BIT, &data, 1, LPS22HB_TIMEOUT);
 	uint32_t tickstart = HAL_GetTick();
@@ -31,8 +30,10 @@ HAL_StatusTypeDef LPS22HB_Init(I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huar
 				&data, 1, LPS22HB_TIMEOUT);
 		if(HAL_GetTick()-tickstart > 100)
 		{
-			sprintf(MSG,"TIMED OUT IN INIT soft reset\r\n");
+#ifdef LOG_DATA
+			sprintf(MSG,"LPS TIMED OUT SAMPLE\r\n");
 			Status = HAL_UART_Transmit(huart, (uint8_t*)MSG, strlen(MSG), LPS22HB_TIMEOUT);
+#endif
 			return HAL_TIMEOUT;
 		}
 	} while ((data & 0x04) == 0x04); // wait for software reset
@@ -44,7 +45,7 @@ HAL_StatusTypeDef LPS22HB_Init(I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huar
 	HAL_I2C_Mem_Write(hi2c, LPS22HB_SLAVE_ADDRESS, LPS22HB_CTRL_REG2, I2C_MEMADD_SIZE_8BIT, &data, 1, LPS22HB_TIMEOUT);
 	HAL_I2C_Mem_Write(hi2c, LPS22HB_SLAVE_ADDRESS, LPS22HB_CTRL_REG3, I2C_MEMADD_SIZE_8BIT, &data, 1, LPS22HB_TIMEOUT);
 
-	HAL_Delay(20);
+	HAL_Delay(200);
 
 	//force a measurement to clear old data
 	LPS22HB_Start_Sample(hi2c,huart);
@@ -56,8 +57,10 @@ HAL_StatusTypeDef LPS22HB_Init(I2C_HandleTypeDef *hi2c, UART_HandleTypeDef *huar
 				&data, 1, LPS22HB_TIMEOUT);
 		if(HAL_GetTick()-tickstart > 100)
 		{
-			sprintf(MSG,"TIMED OUT IN INIT\r\n");
+#ifdef LOG_DATA
+			sprintf(MSG,"TIMED OUT SAMPLE\r\n");
 			Status = HAL_UART_Transmit(huart, (uint8_t*)MSG, strlen(MSG), LPS22HB_TIMEOUT);
+#endif
 			HAL_I2C_DeInit(hi2c);
 			HAL_I2C_Init(hi2c);//reinit i2c, might be hanging
 		}

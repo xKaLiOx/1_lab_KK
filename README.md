@@ -1,2 +1,3 @@
 # f401_GPS_Shield
-# By Simonas Riauka and Aurimas Junevičius 2025-06
+# Modified by Linas Beinorius.
+# Base project by Simonas Riauka and Aurimas Junevičius 2025-06

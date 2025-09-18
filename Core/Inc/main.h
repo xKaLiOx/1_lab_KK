@@ -43,6 +43,21 @@ typedef struct sRegister_t {
 	uint8_t address;
 	uint8_t value;
 }sRegister_t;
+
+typedef struct
+{
+    char Latitude[20];
+    char Longitude[20];
+    char Lat_direction[2];
+    char Long_direction[2];
+
+    uint8_t hours;
+    uint8_t minutes;
+    uint8_t seconds;
+    uint8_t Satellites;
+    uint8_t fix;
+    float HDOP;// precision, 1-2 excellent, >5 bad
+} GPSDef;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -74,7 +89,8 @@ void Error_Handler(void);
 #define INTERVAL_SIGNAL_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
-
+//#define SCAN_I2C
+//#define LOG_DATA
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

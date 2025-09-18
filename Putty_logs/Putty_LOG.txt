@@ -1,0 +1,2049 @@
+LPS22HB acquired values at 531317:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 531650:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:531990
+GPRMC data found, bad HDOP : 6
+GPRMC data found, bad HDOP : 6
+Time: 20:38:28
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 531995:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 532326:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 532660:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:532999
+GPRMC data found, bad HDOP : 6
+GPRMC data found, bad HDOP : 6
+Time: 20:38:29
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 533004:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 533335:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 533669:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:534009
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:38:30
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 534014:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 534345:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 534678:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:535018
+LB
+LPS22HB acquired values at 535022:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:31
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 535354:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 535687:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:536027
+LB
+LPS22HB acquired values at 536031:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:32
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 536363:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 536697:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:537037
+LB
+LPS22HB acquired values at 537041:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:33
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 537373:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 537706:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:538046
+GPRMC data found, bad HDOP : 6
+GPRMC data found, bad HDOP : 6
+Time: 20:38:34
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 538052:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 538383:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 538716:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:539056
+LB
+LPS22HB acquired values at 539060:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:35
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 539392:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 539726:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:540065
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:36
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 540070:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 540401:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 540735:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:541074
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:37
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 541079:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 541410:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 541743:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:542083
+LB
+LPS22HB acquired values at 542087:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:38
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 542419:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 542753:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:543093
+GPRMC data found, bad HDOP : 6
+GPRMC data found, bad HDOP : 6
+Time: 20:38:39
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 543098:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 543429:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 543762:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:544102
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:40
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 544107:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 544438:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 544772:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:545111
+LB
+LPS22HB acquired values at 545116:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:41
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 545448:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 545781:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:546121
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:42
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 546126:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 546457:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 546790:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:547131
+GPRMC data found, bad HDOP : 6
+GPRMC data found, bad HDOP : 6
+Time: 20:38:43
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 547136:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 547467:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 547800:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:548140
+LB
+LPS22HB acquired values at 548144:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 6
+GPRMC data found, bad HDOP : 6
+Time: 20:38:44
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 548476:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 548810:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:549150
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:45
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 549155:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 549486:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 549819:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:550159
+LB
+LPS22HB acquired values at 550164:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 6
+GPRMC data found, bad HDOP : 6
+Time: 20:38:46
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 550496:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 550829:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:551170
+LB
+LPS22HB acquired values at 551174:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 6
+GPRMC data found, bad HDOP : 6
+Time: 20:38:47
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 551506:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 551839:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:552180
+LB
+LPS22HB acquired values at 552184:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:48
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 552516:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 552849:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:553189
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:38:49
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 553195:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 553526:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 553859:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:554199
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:50
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 554205:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 554536:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 554869:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:555210
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:51
+Latitude: 5453.59162 at N
+Longitude: 02400.76183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 555215:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 555546:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 555879:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:556220
+LB
+LPS22HB acquired values at 556224:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:52
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 556556:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 556889:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:557230
+GPRMC data found, bad HDOP : 3
+GPRMC data found, bad HDOP : 3
+Time: 20:38:53
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 3
+LB
+LPS22HB acquired values at 557235:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 557566:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 557899:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+SysTick:558240
+LB
+LPS22HB acquired values at 558244:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:38:54
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 558576:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 558909:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:559249
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:55
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 559254:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 559585:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 559919:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:560259
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:56
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 560264:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 560595:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 560929:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:561269
+LB
+LPS22HB acquired values at 561273:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:57
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 561605:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 561938:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+SysTick:562278
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:38:58
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 562285:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 562616:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 562949:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+SysTick:563289
+LB
+LPS22HB acquired values at 563294:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:38:59
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 563625:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 563959:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:564299
+LB
+LPS22HB acquired values at 564303:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:00
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 564635:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 564969:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:565309
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:01
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 565314:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 565645:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 565978:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:566319
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:02
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 566324:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 566655:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 566988:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:567328
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:03
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 567335:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 567665:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 567999:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+SysTick:568339
+LB
+LPS22HB acquired values at 568343:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:04
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 568675:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 569009:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:569349
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:05
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 569354:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 569685:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 570019:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:570359
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:06
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 570364:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 570695:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 571028:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:571369
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:07
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 571374:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 571705:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 572038:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+SysTick:572378
+LB
+LPS22HB acquired values at 572383:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:08
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 572715:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 573048:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:573388
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:09
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 573393:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 573724:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 574058:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:574398
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:10
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 574403:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 574734:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 575067:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:575407
+LB
+LPS22HB acquired values at 575411:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:11
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 575743:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 576077:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:576416
+LB
+LPS22HB acquired values at 576421:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:12
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 576753:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 577086:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:577426
+LB
+LPS22HB acquired values at 577430:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:13
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 577762:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 578096:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:578436
+LB
+LPS22HB acquired values at 578441:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:14
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 578772:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 579106:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:579446
+LB
+LPS22HB acquired values at 579451:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:15
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 579783:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 580116:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:580456
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:16
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 580463:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 580793:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 581127:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:581467
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:17
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 581472:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 581803:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 582137:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:582477
+LB
+LPS22HB acquired values at 582481:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:18
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 582813:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 583147:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:583487
+LB
+LPS22HB acquired values at 583491:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:19
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 583823:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 584156:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:584497
+LB
+LPS22HB acquired values at 584501:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:20
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 584833:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 585166:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:585507
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:21
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 585512:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 585843:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 586176:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:586517
+LB
+LPS22HB acquired values at 586521:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:22
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 586853:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 587186:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:587527
+LB
+LPS22HB acquired values at 587531:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:23
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 587863:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 588196:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+SysTick:588537
+LB
+LPS22HB acquired values at 588541:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:24
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 588873:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 589206:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:589547
+LB
+LPS22HB acquired values at 589552:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:25
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 589884:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 590217:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:590558
+LB
+LPS22HB acquired values at 590562:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:26
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 590894:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 591227:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:591567
+LB
+LPS22HB acquired values at 591572:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:27
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 591904:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 592237:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:592577
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:28
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 592582:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 592913:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 593246:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:593586
+LB
+LPS22HB acquired values at 593591:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:29
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 593923:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 594256:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:594596
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:30
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 594601:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 594932:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 595265:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:595605
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:31
+Latitude: 5453.59110 at N
+Longitude: 02400.76089 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 595610:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 595941:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 596274:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:596614
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:32
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 596619:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 596950:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 597284:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:597624
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:33
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 597629:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 597960:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 598293:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:598633
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:34
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 598638:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 598969:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 599302:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:599642
+LB
+LPS22HB acquired values at 599646:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:35
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 599978:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 600312:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:600651
+LB
+LPS22HB acquired values at 600655:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:36
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 600987:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 601321:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:601660
+LB
+LPS22HB acquired values at 601665:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:37
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 601997:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 602330:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:602670
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:38
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 602675:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 603006:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 603340:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:603680
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:39
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 603685:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 604016:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 604349:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:604689
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:40
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 604696:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 605027:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 605360:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:605700
+LB
+LPS22HB acquired values at 605704:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:41
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 606036:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 606369:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+SysTick:606710
+LB
+LPS22HB acquired values at 606714:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:42
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 607046:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 607379:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:607719
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:43
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 607724:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 608055:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 608389:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:608729
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:44
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 608734:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 609065:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 609398:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+SysTick:609738
+LB
+LPS22HB acquired values at 609743:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:45
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 610074:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 610408:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:610748
+LB
+LPS22HB acquired values at 610752:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:46
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 611084:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 611417:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:611757
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:47
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 611763:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 612094:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 612427:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:612767
+GPRMC data found, bad HDOP : 3
+GPRMC data found, bad HDOP : 3
+Time: 20:39:48
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 3
+LB
+LPS22HB acquired values at 612772:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 613103:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 613436:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+SysTick:613776
+LB
+LPS22HB acquired values at 613781:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:49
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 614113:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 614446:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:614786
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:50
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 614791:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 615122:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 615455:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:615795
+LB
+LPS22HB acquired values at 615799:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 4
+GPRMC data found, bad HDOP : 4
+Time: 20:39:51
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 4
+LB
+LPS22HB acquired values at 616131:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 616465:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:616805
+LB
+LPS22HB acquired values at 616809:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:52
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 617141:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 617474:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:617815
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:53
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 617820:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 618151:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 618484:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:618824
+GPRMC data found, bad HDOP : 5
+GPRMC data found, bad HDOP : 5
+Time: 20:39:54
+Latitude: 5453.59114 at N
+Longitude: 02400.75964 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 618829:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 619160:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 619494:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:619834
+GPRMC data found and synchronised
+Time: 20:39:55
+Latitude: 5453.58650 at N
+Longitude: 02400.74618 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 619839:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 620170:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 620504:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:620844
+GPRMC data found and synchronised
+Time: 20:39:56
+Latitude: 5453.58466 at N
+Longitude: 02400.73926 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 620849:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 621180:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 621513:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:621853
+GPRMC data found and synchronised
+Time: 20:39:57
+Latitude: 5453.58396 at N
+Longitude: 02400.73515 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 621858:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 622189:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 622523:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:622863
+GPRMC data found and synchronised
+Time: 20:39:58
+Latitude: 5453.58390 at N
+Longitude: 02400.73187 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 622868:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 623199:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 623532:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:623873
+LB
+LPS22HB acquired values at 623877:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+GPRMC data found and synchronised
+Time: 20:39:59
+Latitude: 5453.58401 at N
+Longitude: 02400.72991 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 624210:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 624543:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:624884
+GPRMC data found and synchronised
+Time: 20:40:00
+Latitude: 5453.58367 at N
+Longitude: 02400.72840 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 624889:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 625220:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 625553:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:625894
+GPRMC data found and synchronised
+Time: 20:40:01
+Latitude: 5453.58328 at N
+Longitude: 02400.72753 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 625899:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 626230:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 626563:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:626903
+GPRMC data found and synchronised
+Time: 20:40:02
+Latitude: 5453.58310 at N
+Longitude: 02400.72639 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 626909:
+Pressure = 1009.5 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 627241:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 627574:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+SysTick:627914
+GPRMC data found and synchronised
+Time: 20:40:03
+Latitude: 5453.58326 at N
+Longitude: 02400.72483 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 627919:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 628250:
+Pressure = 1009.4 hPa, Temperature = 24.2 C
+
+LB
+LPS22HB acquired values at 628583:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+SysTick:628923
+LB
+LPS22HB acquired values at 628928:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+GPRMC data found and synchronised
+Time: 20:40:04
+Latitude: 5453.58232 at N
+Longitude: 02400.72183 at E
+Satellites: 5
+LB
+LPS22HB acquired values at 629261:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 629594:
+Pressure = 1009.5 hPa, Temperature = 24.1 C
+
+SysTick:629934
+GPRMC data found and synchronised
+Time: 20:40:05
+Latitude: 5453.58153 at N
+Longitude: 02400.72122 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 629939:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 630270:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 630604:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+SysTick:630944
+GPRMC data found and synchronised
+Time: 20:40:06
+Latitude: 5453.58209 at N
+Longitude: 02400.72003 at E
+Satellites: 6
+LB
+LPS22HB acquired values at 630950:
+Pressure = 1009.5 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 631281:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 631614:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+SysTick:631955
+GPRMC data found and synchronised
+Time: 20:40:07
+Latitude: 5453.58308 at N
+Longitude: 02400.71847 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 631961:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 632292:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 632625:
+Pressure = 1009.5 hPa, Temperature = 24.1 C
+
+SysTick:632966
+GPRMC data found and synchronised
+Time: 20:40:08
+Latitude: 5453.58380 at N
+Longitude: 02400.71760 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 632971:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 633302:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 633635:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+SysTick:633976
+LB
+LPS22HB acquired values at 633980:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+GPRMC data found and synchronised
+Time: 20:40:09
+Latitude: 5453.58427 at N
+Longitude: 02400.71703 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 634313:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 634646:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+SysTick:634987
+LB
+LPS22HB acquired values at 634992:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+GPRMC data found and synchronised
+Time: 20:40:10
+Latitude: 5453.58491 at N
+Longitude: 02400.71589 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 635324:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 635658:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+SysTick:635999
+GPRMC data found and synchronised
+Time: 20:40:11
+Latitude: 5453.58537 at N
+Longitude: 02400.71526 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 636004:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 636335:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 636668:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+SysTick:637009
+LB
+LPS22HB acquired values at 637014:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+GPRMC data found and synchronised
+Time: 20:40:12
+Latitude: 5453.58600 at N
+Longitude: 02400.71434 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 637346:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 637680:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+SysTick:638020
+GPRMC data found and synchronised
+Time: 20:40:13
+Latitude: 5453.58608 at N
+Longitude: 02400.71425 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 638025:
+Pressure = 1009.4 hPa, Temperature = 24.1 C
+
+LB
+LPS22HB acquired values at 638356:
+Pressure = 1009.4 hPa, Temperature = 24.0 C
+
+LB
+LPS22HB acquired values at 638690:
+Pressure = 1009.4 hPa, Temperature = 24.0 C
+
+SysTick:639030
+LB
+LPS22HB acquired values at 639034:
+Pressure = 1009.4 hPa, Temperature = 24.0 C
+
+GPRMC data found and synchronised
+Time: 20:40:14
+Latitude: 5453.58664 at N
+Longitude: 02400.71352 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 639367:
+Pressure = 1009.4 hPa, Temperature = 24.0 C
+
+LB
+LPS22HB acquired values at 639701:
+Pressure = 1009.5 hPa, Temperature = 24.0 C
+
+SysTick:640041
+GPRMC data found and synchronised
+Time: 20:40:15
+Latitude: 5453.58747 at N
+Longitude: 02400.71248 at E
+Satellites: 7
+LB
+LPS22HB acquired values at 640046:
+Pressure = 1009.4 hPa, Temperature = 24.0 C
+
+LB
+LPS22HB acquired values at 640377:
+Pressure = 1009.4 hPa, Temperature = 24.0 C
+
+LB
+LPS22HB acquired values at 640710:
+Pressure = 1009.4 hPa, Temperature = 24.0 C
+
+SysTick:641051
+GPRMC data found and synchronised
+Time: 20:40:16
+Latitude: 5453.58785 at N
+Longitude: 02400.71187 at E
+Satellites: 8
+LB
+LPS22HB acquired values at 641056:
+Pressure = 1009.5 hPa, Temperature = 24.0 C
+
+L
